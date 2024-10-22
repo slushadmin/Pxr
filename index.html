@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Web Proxy</title>
+    <script>
+        function proxyRequest() {
+            const url = document.getElementById("urlInput").value;
+            if (url) {
+                window.location.href = "https://cors-anywhere.herokuapp.com/" + url;
+            } else {
+                alert("Please enter a URL.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Static Web Proxy</h1>
+    <input type="text" id="urlInput" placeholder="Enter URL to proxy" />
+    <button onclick="proxyRequest()">Go</button>
+</body>
+</html>
